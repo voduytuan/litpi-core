@@ -1,5 +1,6 @@
 {
     "name": "voduytuan/litpi-core",
+    "version": "1.0.0",
     "description": "Litpi core classes used for Litpi framework and Litpi Slim framework",
     "require": {
         "symfony/http-foundation": "2.*",
