@@ -50,7 +50,7 @@ class SendMail
                 'privateKey' => $this->registry->setting['amazon']['privatekey']
             );
             //cau hinh de goi mail bang amazon service
-            $this->mailer = new \Vendor\Other\AmazonSes($sesConf);
+            $this->mailer = new AmazonSes($sesConf);
             try {
                 if ($this->toEmail != '') {
                     $toList = array($this->toEmail => $this->toName);
@@ -92,7 +92,7 @@ class SendMail
             //neu enable smtp thi su dung smtp
             //ko thi su dung mail thuong
             $this->usingSMTP = $this->registry->setting['smtp']['enable'];
-            $this->mailer = new \Vendor\Other\PhpMailer();
+            $this->mailer = new PhpMailer();
 
             $this->mailer->From = $this->fromEmail;
             $this->mailer->FromName = $this->fromName;
