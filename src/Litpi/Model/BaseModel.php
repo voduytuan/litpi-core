@@ -25,6 +25,9 @@ abstract class BaseModel extends \stdClass
         }
     }
 
+    /**
+     * @return \Litpi\MyPdo
+     */
     public static function getDb()
     {
         $registry = \Litpi\Registry::getInstance();
