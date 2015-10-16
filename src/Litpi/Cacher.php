@@ -146,11 +146,11 @@ class Cacher
             //Not implemented
         } elseif ($this->storage == self::STORAGE_REDIS) {
             if (self::$redis != null) {
-                self::$redis->set($this->key, $value, $duration);
+                $output = self::$redis->set($this->key, $value, $duration);
             }
         } elseif ($this->storage == self::STORAGE_MEMCACHED) {
             if (self::$memcached != null) {
-                self::$memcached->set($this->key, $value, $duration);
+                $output = self::$memcached->set($this->key, $value, $duration);
             }
         } else {
             $this->storageException();
