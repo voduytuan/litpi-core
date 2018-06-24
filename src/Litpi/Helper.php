@@ -88,7 +88,7 @@ class Helper
 
     public static function validateEmail($email)
     {
-        return preg_match('/^[\w.-]+@([\w.-]+\.)+[a-z]{2,6}$/is', $email);
+        return preg_match('/^[\w.-]+@([\w.-]+\.)+[a-z]{1,32}$/is', $email);
     }
 
     public static function getSessionId()
