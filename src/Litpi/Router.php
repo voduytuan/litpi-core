@@ -105,7 +105,7 @@ class Router
 
     private function extractArgs($args)
     {
-        if (count($args) == 0) {
+        if (is_array($args) && count($args) == 0) {
             return false;
         }
         $this->args = $args;
